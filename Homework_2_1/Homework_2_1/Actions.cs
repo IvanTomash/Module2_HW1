@@ -25,8 +25,9 @@ namespace Homework_2_1
         }
 
         public Result ThirdMethod()
-        {           
-            return new Result(false, "I broke a logic");
+        {
+            Logger.Instance.LogInfo(LogTypes.Error, "Action failed by a reason:\t" + "I broke a logic");
+            return new Result(false);
         }
     }
 }

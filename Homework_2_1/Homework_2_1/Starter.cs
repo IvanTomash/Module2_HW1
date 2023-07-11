@@ -30,10 +30,7 @@ namespace Homework_2_1
                         res = actor.ThirdMethod();
                         break;
                 }
-                if (res.Status == false)
-                {
-                    Logger.Instance.LogInfo(LogTypes.Error, "Action failed by a reason:\t" + res.Message);
-                }
+                
                 Thread.Sleep(100);                
             }
             File.WriteAllText("log.txt",Logger.Instance.AllLogs);
